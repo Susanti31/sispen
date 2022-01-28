@@ -1,33 +1,31 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
-class Product_model extends CI_Model
+class M_Kesra extends CI_Model
 {
-    private $_table = "products";
+    private $_table = "penduduk";
 
-    public $product_id;
-    public $name;
-    public $price;
-    public $image = "default.jpg";
-    public $description;
+    public $no_kk;
+    public $nama;
+    public $alamat;
 
     public function rules()
     {
         return [
             [
-                'field' => 'name',
-                'label' => 'Name',
+                'field' => 'no_kk',
+                'label' => 'no_kk',
                 'rules' => 'required'
             ],
 
             [
-                'field' => 'price',
-                'label' => 'Price',
+                'field' => 'nama',
+                'label' => 'Nama',
                 'rules' => 'numeric'
             ],
 
             [
-                'field' => 'description',
-                'label' => 'Description',
+                'field' => 'alamat',
+                'label' => 'Alamat',
                 'rules' => 'required'
             ]
         ];
@@ -40,31 +38,29 @@ class Product_model extends CI_Model
 
     public function getById($id)
     {
-        return $this->db->get_where($this->_table, ["product_id" => $id])->row();
+        return $this->db->get_where($this->_table, ["no_kk" => $id])->row();
     }
 
     public function save()
     {
         $post = $this->input->post();
-        $this->product_id = uniqid();
-        $this->name = $post["name"];
-        $this->price = $post["price"];
-        $this->description = $post["description"];
+        $this->no_kk = uniqid();
+        $this->nama = $post["nama"];
+        $this->alamat = $post["alamat"];
         return $this->db->insert($this->_table, $this);
     }
 
     public function update()
     {
         $post = $this->input->post();
-        $this->product_id = $post["id"];
-        $this->name = $post["name"];
-        $this->price = $post["price"];
-        $this->description = $post["description"];
-        return $this->db->update($this->_table, $this, array('product_id' => $post['id']));
+        $this->no_kk = $post["id"];
+        $this->nama = $post["nama"];
+        $this->alamat = $post["alamat"];
+        return $this->db->update($this->_table, $this, array('no_kk' => $post['id']));
     }
 
     public function delete($id)
     {
-        return $this->db->delete($this->_table, array("product_id" => $id));
+        return $this->db->delete($this->_table, array("no_kk" => $id));
     }
 }
