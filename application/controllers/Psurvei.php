@@ -11,4 +11,11 @@ class Psurvei extends CI_Controller
         $this->load->view('v_dashboard');
         $this->load->view('template/footer');
     }
+    public function survei()
+    {
+        $this->load->view('template/head');
+        $this->load->view('template/psurvei_sidebar');
+        $this->load->view('survei/index');
+        $this->load->view('template/footer');
+    }
 }
