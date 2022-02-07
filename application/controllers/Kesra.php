@@ -13,12 +13,12 @@ class Kesra extends CI_Controller
 
     public function menu()
     {
-        $data["penduduk"] = $this->M_Kesra->getAll();
+        $data["penduduk"] = $this->M_Kesra->get("penduduk");
 
         $this->load->view('template/head');
         $this->load->view('template/kesra_sidebar');
         // $this->load->view('v_dashboard');
-        $this->load->view('masyarakat/index', $data);
+        $this->load->view('masyarakat/index',  $penduduk);
 
         // $this->load->view('masyarakat/index');
 
