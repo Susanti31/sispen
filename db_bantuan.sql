@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Jan 2022 pada 00.02
--- Versi server: 10.4.21-MariaDB
--- Versi PHP: 8.0.12
+-- Waktu pembuatan: 07 Feb 2022 pada 09.32
+-- Versi server: 10.4.11-MariaDB
+-- Versi PHP: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -77,6 +78,15 @@ CREATE TABLE `penduduk` (
   `nama` varchar(100) NOT NULL,
   `alamat` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `penduduk`
+--
+
+INSERT INTO `penduduk` (`no_kk`, `nama`, `alamat`) VALUES
+(143412, 'affad', 'fadfrtwwrt'),
+(231312, 'afd', 'fdadf'),
+(2147483647, 'sad', 'asdsda');
 
 -- --------------------------------------------------------
 
