@@ -2,33 +2,28 @@
 
     <h1>Menu Data Masyarakat</h1>
 	<br>
-	<a href="<?= site_url('Kesra/tambah')?>" class="btn btn-primary">Tambah</a>
+	<a href="<?= site_url('Kesra/tambah_kriteria')?>" class="btn btn-primary">Tambah</a>
 <br>
 <h1></h1>
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">No</th>
+            <th scope="col">No</th>
                 <th scope="col">No Kartu Keluarga</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Alamat</th>
+				
 				<th scope="col">Aksi</th>
+
+
+
             </tr>
         </thead>
         <tbody>
 
-<<<<<<< HEAD
-            <?php foreach ($penduduk->result() as $p) ?>
-            <tr>
-
-                <th scope="col"><?php echo $p->nama ?></th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-=======
             <?php 
 			$no =1;
-			foreach ($penduduk as $p) {
+			foreach ($kriteria as $k) {
 			
 			?>
 
@@ -36,9 +31,9 @@
             <tr>
 
                 <th scope="col"><?= $no++?></th>
-                <th scope="col"><?= $p->no_kk ?></th>
-                <th scope="col"><?= $p->nama ?></th>
-                <th scope="col"><?= $p->alamat ?></th>
+                <th scope="col"><?= $k->no_kk ?></th>
+                <th scope="col"><?= $k->nama ?></th>
+                <th scope="col"><?= $k->alamat ?></th>
 				<th scope="col">
 				<a href="<?=site_url('Kesra/update/'),$p->no_kk ?>" class="btn btn-success btn-sm"
                     type="submit"><i class="fas fa-fw fa-edit"></i> Edit</a>
@@ -76,7 +71,6 @@
                 <td>Larry</td>
                 <td>the Bird</td>
                 <td>@twitter</td>
->>>>>>> fe86f022eb89afd2340f457b9b34d1f255086c50
             </tr>
         </tbody> -->
     </table>
@@ -84,9 +78,4 @@
 
 
 
-<<<<<<< HEAD
-
 </div>
-=======
-</div>
->>>>>>> fe86f022eb89afd2340f457b9b34d1f255086c50
