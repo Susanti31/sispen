@@ -1,10 +1,8 @@
 <div>
 
     <h1>Menu Data Calon Penerima</h1>
-	<br>
-	<a href="<?= site_url('Kesra/tambah_kriteria')?>" class="btn btn-primary">Tambah</a>
-<br>
-<h1></h1>
+
+    <h1></h1>
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -12,8 +10,8 @@
                 <th scope="col">No Kartu Keluarga</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Alamat</th>
-				
-				<th scope="col">Aksi</th>
+
+                <th scope="col">Aksi</th>
 
 
 
@@ -21,27 +19,26 @@
         </thead>
         <tbody>
 
-            <?php 
-			$no =1;
-			foreach ($penduduk as $item) {
-			
-			?>
+            <?php
+            $no = 1;
+            foreach ($penduduk as $item) {
+
+            ?>
 
 
-            <tr>
+                <tr>
 
-                <th scope="col"><?= $no++?></th>
-                <th scope="col"><?= $item->no_kk?></th>
-                <th scope="col"><?= $item->nama?></th>
-                <th scope="col"><?= $item->alamat?></th>
-				<th scope="col">
-				<a href="<?=site_url('survei/tambah/'),$item->no_kk ?>" class="btn btn-success btn-sm"
-                    type="submit"><i class="fas fa-fw fa-edit"></i> Tambah Kriteria</a>
-                
+                    <th scope="col"><?= $no++ ?></th>
+                    <th scope="col"><?= $item->no_kk ?></th>
+                    <th scope="col"><?= $item->nama ?></th>
+                    <th scope="col"><?= $item->alamat ?></th>
+                    <th scope="col">
+                        <a href="<?= site_url('Psurvei/tambah_kriteria/'), $item->no_kk ?>" class="btn btn-success btn-sm" type="submit"><i class="fas fa-fw fa-edit"></i> Tambah Kriteria</a>
 
-				</th>
-			</tr>
-			<?php } ?>
+
+                    </th>
+                </tr>
+            <?php } ?>
         </tbody>
     </table>
 
