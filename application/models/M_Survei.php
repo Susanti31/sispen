@@ -2,7 +2,7 @@
 
 class M_Kesra extends CI_Model
 {
-    private $_table = "penduduk";
+    private $_table = "kriteria";
 
    
     public function getAll()

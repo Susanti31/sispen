@@ -4,6 +4,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Psurvei extends CI_Controller
 {
 
+    // public function __construct()
+	// {
+	// 	parent::__construct();
+	// 	$this->load->model("M_Survei");
+	// 	$this->load->library('form_validation');
+	// }
     public function menu()
     {
         $this->load->view('template/head');
@@ -27,6 +33,7 @@ class Psurvei extends CI_Controller
         $this->load->view('template/head');
         $this->load->view('template/kesra_sidebar');
         $this->load->view('kriteria/tambah', $data);
+        // $this->load->view('survei/tambah', $data);
         $this->load->view('template/footer');
     }
     public function tambah_data($no_kk)
@@ -42,18 +49,22 @@ class Psurvei extends CI_Controller
         redirect('Kesra');
     }
 
-    public function tambah_kriteria()
+    public function tambah_kriteria($no_kk)
     {
+
+        $data['penduduk'] = $this->M_Kesra->getById($no_kk);
 
         $this->load->view('template/head');
         $this->load->view('template/psurvei_sidebar');
-        $this->load->view('kriteria/tambah');
+        $this->load->view('kriteria/tambah',$data);
         $this->load->view('template/footer');
     }
     public function tambah_data_kriteria()
     {
+        // $data['penduduk'] = $this->M_Kesra->getById($no_kk);
 
         $data = array(
+            // 'id_kriteria' => $this->input->post('id_kriteria'),
             'no_kk' => $this->input->post('no_kk'),
             'status_tempat_tinggal' => $this->input->post('status_tempat_tinggal'),
             'status_lahan' => $this->input->post('status_lahan'),
@@ -68,7 +79,8 @@ class Psurvei extends CI_Controller
             'fasilitas_mck' => $this->input->post('fasilitas_mck'),
 
         );
-        $this->db->insert('kriteria', $data);
+        // $sql = mysqli_query("INSERT INTO rekening (id_rek,id_user,no_rek) VALUES ('$data')");
+        $this->db->insert('kriteria', $sql);
         redirect('kriteria');
     }
 }

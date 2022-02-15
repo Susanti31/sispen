@@ -9,12 +9,14 @@
   <div class="form-group row">
     <label for="inputno_kk" class="col-sm-2 col-form-label">No Kartu Keluarga</label>
     <div class="col-sm-10">
-      <input type="number" class="form-control" name="no_kk" id="no_kk" placeholder="No Kartu Keluarga">
+      <input type="number" class="form-control" name="no_kk" id="no_kk" value="$penduduk->no_kk" placeholder="No Kartu Keluarga"><?= $penduduk->no_kk ?>
     </div>
   </div>
   <div class="form-group row">
     <label for="inputNama" class="col-sm-2 col-form-label">Status Tempat Tinggal</label>
+    <select name="status_tempat_tinggal" id="" disabled="disabled"></select>
     <div class="col-sm-10">
+
       <input type="text" class="form-control" id="status_tempat_tinggal" name="status_tempat_tinggal" placeholder="Masukkan Status Tempat Tinggal Anda">
     </div>
   </div>
