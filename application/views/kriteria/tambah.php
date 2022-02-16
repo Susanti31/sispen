@@ -149,7 +149,7 @@
 
   <div class="form-group row">
     <div class="col-sm-10">
-	<a href="<?= site_url('Kesra/index')?>" class="btn btn-primary">kembali</a>
+	<a href="<?= site_url('psurvei/index')?>" class="btn btn-primary">kembali</a>
   
 	<button type="submit" class="btn btn-primary">Simpan</button>
     </div>
