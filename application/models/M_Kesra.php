@@ -74,4 +74,9 @@ class M_Kesra extends CI_Model
 		$data = $this->db->query("SELECT * FROM `kriteria` ")->result();
 		return $data;
 	}
+	public function kk()
+	{
+		$data = $this->db->query("SELECT no_kk FROM penduduk ");
+		return $data;
+	}
 }

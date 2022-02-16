@@ -24,7 +24,7 @@ class M_Kesra extends CI_Model
     
 		function hapus($no_kk){
 			$this->db->where('no_kk',$no_kk);
-			$this->db->delete('penduduk');
+			$this->db->delete('kriteria');
 		return true;
 		}
     public function data_kriteria()

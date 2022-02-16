@@ -62,9 +62,12 @@ class Psurvei extends CI_Controller
     public function tambah_data_kriteria()
     {
         // $data['penduduk'] = $this->M_Kesra->getById($no_kk);
+		// $penduduk= $this->M_Kesra->getAll('no_kk');
 
+		// $no_kk = $penduduk->get('no_kk');
+		// var_dump($no_kk);
         $data = array(
-            // 'id_kriteria' => $this->input->post('id_kriteria'),
+            'id_kriteria' => $this->input->post('id_kriteria'),
             'no_kk' => $this->input->post('no_kk'),
             'status_tempat_tinggal' => $this->input->post('status_tempat_tinggal'),
             'status_lahan' => $this->input->post('status_lahan'),
@@ -79,8 +82,10 @@ class Psurvei extends CI_Controller
             'fasilitas_mck' => $this->input->post('fasilitas_mck'),
 
         );
-        // $sql = mysqli_query("INSERT INTO rekening (id_rek,id_user,no_rek) VALUES ('$data')");
-        $this->db->insert('kriteria', $sql);
-        redirect('kriteria');
+		// var_dump($data);
+        // $sql = mysqli_query("INSERT INTO kriter (no,id_user,no_rek) VALUES ('$data')");
+		$this->db->insert('kriteria', $data);
+		// $this->db->insert('kriteria');
+        redirect('psurvei/index');
     }
 }

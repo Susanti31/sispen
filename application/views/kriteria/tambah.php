@@ -9,10 +9,18 @@
   <div class="form-group row">
     <label for="inputno_kk" class="col-sm-2 col-form-label">No Kartu Keluarga</label>
     <div class="col-sm-10">
-      
-      <input type="number" class="form-control" name="no_kk" value="$penduduk->no_kk" id="no_kk" placeholder="<?= $penduduk->no_kk ?>">
+      <?php $i = "SELECT id_kriteria+1 FROM `kriteria` ORDER BY id_kriteria DESC LIMIT 1";
+			// $x = $i+1;
+      // var_dump($i+1);
+
+{
+	
+?>
+      <input type="number" class="form-control" name="id_kriteria" value="<?= rand(100,99999) ?>" id="id_kriteria" hidden>
+      <input type="text" class="form-control" name="no_kk" value="<?=$penduduk->no_kk?>" id="no_kk" placeholder="<?= $penduduk->no_kk ?>">
     </div>
   </div>
+  <?php } ?>
   <div class="form-group row">
     <label for="status_tempat_tinggal" class="col-sm-2 col-form-label">Status Tempat Tinggal</label>
     <div class="col-sm-10">
