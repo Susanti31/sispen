@@ -17,7 +17,7 @@
 	
 ?>
       <input type="number" class="form-control" name="id_kriteria" value="<?= rand(100,99999) ?>" id="id_kriteria" hidden>
-      <input type="text" class="form-control" name="no_kk" value="<?=$penduduk->no_kk?>" id="no_kk" placeholder="<?= $penduduk->no_kk ?>">
+      <input type="text" class="form-control" name="no_kk" value="<?=$penduduk->no_kk?>" id="no_kk" placeholder="<?= $penduduk->no_kk ?>" readonly>
     </div>
   </div>
   <?php } ?>
