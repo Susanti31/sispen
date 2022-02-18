@@ -33,9 +33,9 @@
                     <th scope="col"><?= $k->nama ?></th>
                     <th scope="col"><?= $k->alamat ?></th>
                     <th scope="col">
-                        <a href="<?= site_url('Kesra/update/'), $p->no_kk ?>" class="btn btn-success btn-sm" type="submit"><i class="fas fa-fw fa-edit"></i> Edit</a>
+                        <a href="<?= site_url('Kesra/update/'), $k->no_kk ?>" class="btn btn-success btn-sm" type="submit"><i class="fas fa-fw fa-edit"></i> Edit</a>
 
-                        <a href="<?= site_url('Kesra/delete/'), $p->no_kk ?>" class="btn btn-sm btn-danger" type="submit"><i class="fas fa-fw fa-trash"></i> Hapus</a>
+                        <a href="<?= site_url('Kesra/delete/'), $k->no_kk ?>" class="btn btn-sm btn-danger" type="submit"><i class="fas fa-fw fa-trash"></i> Hapus</a>
 
 
                     </th>

@@ -90,7 +90,7 @@ class Kesra extends CI_Controller
 
 	public function kriteria()
 	{
-		$data['kriteria'] = $this->M_Kesra->data_kriteria();
+		$data['kriteria'] = $this->M_Kesra->getAll();
 		// $data['pria']= $this->M_parfum->ambil_data_pria();
 
 		$this->load->view('template/head');

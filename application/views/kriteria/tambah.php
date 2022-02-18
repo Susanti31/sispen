@@ -6,6 +6,7 @@
 
 <!-- <form class="form-group" action="<?= form_open_multipart('parfum/tambah_parfum') ?>" method="post"> -->
 <form style="color:blue" >
+<div class="container">
   <div class="form-group row">
     <label for="inputno_kk" class="col-sm-2 col-form-label">No Kartu Keluarga</label>
     <div class="col-sm-10">
@@ -23,20 +24,25 @@
   <?php } ?>
   <div class="form-group row">
     <label for="status_tempat_tinggal" class="col-sm-2 col-form-label">Status Tempat Tinggal</label>
+<?php echo validation_errors(); ?>
+
     <div class="col-sm-10">
       <select name="status_tempat_tinggal" class= "form-control">
         <option value="Milik Sendiri">Milik Sendiri </option>
-        <option value="Milik Sendiri">Milik Sendiri </option>
+        <option value="Bukan Milik Sendiri"> Bukan Milik Sendiri </option>
       <!-- <input type="text" class="form-control" id="status_tempat_tinggal" name="status_tempat_tinggal" placeholder="Masukkan Status Tempat Tinggal Anda"> -->
 </select>
+
     </div>
   </div>
+
+
   <div class="form-group row">
     <label for="status_lahan" class="col-sm-2 col-form-label">Status Lahan</label>
     <div class="col-sm-10">
     <select name="status_lahan" class= "form-control">
         <option value="Milik Sendiri">Milik Sendiri </option>
-        <option value="Milik Sendiri">Milik Sendiri </option>
+        <option value="Bukan Milik Sendiri">Bukan Milik Sendiri </option>
 </select>
   </div>
   </div>
@@ -153,6 +159,7 @@
   
 	<button type="submit" class="btn btn-primary">Simpan</button>
     </div>
+  </div>
   </div>
 </form>
   <!-- <td " align="center"><input type="submit" name="submit" value="TAMBAH"> </td> -->

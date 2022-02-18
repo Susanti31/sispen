@@ -4,7 +4,6 @@ class M_Kesra extends CI_Model
 {
     private $_table = "kriteria";
 
-   
     public function getAll()
     {
 		$data = $this->db->query("SELECT * FROM `penduduk` ")->result();
