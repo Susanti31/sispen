@@ -31,11 +31,10 @@
                     <th scope="col"><?= $no++ ?></th>
                     <th scope="col"><?= $k->no_kk ?></th>
                     <th scope="col"><?= $k->nama ?></th>
-                    <th scope="col"><?= $k->alamat ?></th>
+                    <th scope="col" ><?= $k->alamat ?></th>
                     <th scope="col">
-                        <a href="<?= site_url('Kesra/update/'), $k->no_kk ?>" class="btn btn-success btn-sm" type="submit"><i class="fas fa-fw fa-edit"></i> Edit</a>
+                        <a href="<?= site_url('Kesra/update/'), $k->no_kk ?>" class="btn btn-primary btn-sm" type="submit"><i class="fas fa-fw fa-edit"></i> Detail</a>
 
-                        <a href="<?= site_url('Kesra/delete/'), $k->no_kk ?>" class="btn btn-sm btn-danger" type="submit"><i class="fas fa-fw fa-trash"></i> Hapus</a>
 
 
                     </th>
@@ -44,34 +43,6 @@
         </tbody>
     </table>
 
-    <!-- <table class="table">
-        <thead class="thead-light">
-            <tr>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
-        </tbody> -->
-    </table>
-
-
-
-
 </div>
+<script>
+</script>
