@@ -4,8 +4,8 @@
     <h1><b>Input Data Kriteria</b></h1>
 	<br>
 
-<form  name="myForm" onsubmit="return validateForm()" method="post">
-<!-- <form  action="<?php echo site_url('psurvei/tambah_data_kriteria')?>"name="myForm" onsubmit="return validateForm()" method="post"> -->
+<!-- <form  name="myForm" onsubmit="return validateForm()" method="post"> -->
+<form  action="<?php echo site_url('psurvei/tambah_data_kriteria')?>"name="myForm" onsubmit="return validateForm()" method="post">
 <!-- <div class="card"> -->
   <div class="form-group row">
     <label for="inputno_kk" class="col-sm-2 col-form-label">No Kartu Keluarga</label>
@@ -185,10 +185,10 @@ function validateForm() {
 		return false;
 	}
 }
-  function price() {
-	var tes = document.getElementById("luas_lahan").value;
-        document.getElementById("harga").value=tes;
-				console.log("luas_lahan");
-}
+//   function price() {
+// 	var tes = document.getElementById("luas_lahan").value;
+//         document.getElementById("harga").value=tes;
+// 				console.log("luas_lahan");
+// }
 
 </script>

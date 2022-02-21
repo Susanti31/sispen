@@ -4,7 +4,6 @@
 	<br>
 	<?php echo form_open_multipart('kesra/tambah_data') ?>
 
-<!-- <form class="form-group" action="<?= form_open_multipart('parfum/tambah_parfum') ?>" method="post"> -->
 <form style="color:blue" >
   <div class="form-group row">
     <label for="inputno_kk" class="col-sm-2 col-form-label">No Kartu Keluarga</label>
