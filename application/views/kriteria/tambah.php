@@ -58,7 +58,6 @@
 </select>
     </div>
   </div>
-<input type="text" id="harga">
 	<div class="form-group row">
     <label for="luas_lantai" class="col-sm-2 col-form-label">Luas Lantai</label>
     <div class="col-sm-10">
