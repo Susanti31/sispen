@@ -49,15 +49,16 @@
 	<div class="form-group row">
     <label for="luas_lahan" class="col-sm-2 col-form-label">Luas Lahan</label>
     <div class="col-sm-10">
-    <select name="luas_lahan" id="luas_lahan" class="form-control" onchange="price">
+    <select name="luas_lahan" id="luas_lahan" class="form-control" onchange="luas">
         <option >Pilih Luas Lahan </option>
-        <option   value="40 - 50m2">40 - 50m2 </option>
-        <option  data-val="3" value="50 - 60m2">50 - 60m2 </option>
-        <option  data-val="2" value="60 - 70m2">60 - 70m2 </option>
-        <option  data-val="1" value=">70m2">>70m2 </option>
+        <option  luas="4"  value="40 - 50m2">40 - 50m2 </option>
+        <option  luas="3" value="50 - 60m2">50 - 60m2 </option>
+        <option  luas="2" value="60 - 70m2">60 - 70m2 </option>
+        <option  luas="1" value=">70m2">>70m2 </option>
 </select>
     </div>
   </div>
+	<input type="text" id="luas">
 	<div class="form-group row">
     <label for="luas_lantai" class="col-sm-2 col-form-label">Luas Lantai</label>
     <div class="col-sm-10">
@@ -185,6 +186,13 @@ function validateForm() {
 		return false;
 	}
 }
+function jumlah(){
+	var me = $(this),
+		luas = me.attr('luas');
+		// console.log(luas);
+		$('#luas').text(luas);
+}
+
 //   function price() {
 // 	var tes = document.getElementById("luas_lahan").value;
 //         document.getElementById("harga").value=tes;
