@@ -82,10 +82,31 @@ class Psurvei extends CI_Controller
             'fasilitas_mck' => $this->input->post('fasilitas_mck'),
 
         );
+		// $calon = array(
+		// 	'id_calon_penerima' => $this->input->post('id_calon_penerima'),
+        //     'id_kriteria' => $this->input->post('id_kriteria'),
+        //     'peringkat' => $this->input->post('peringkat'),
+
+
+        // );
 		// var_dump($data);
         // $sql = mysqli_query("INSERT INTO kriter (no,id_user,no_rek) VALUES ('$data')");
 		$this->db->insert('kriteria', $data);
+		// $this->db->insert('calon_penerima', $calon);
+
 		// $this->db->insert('kriteria');
         redirect('psurvei/index');
+    }
+	public function calonKriteria()
+    {
+        $data = array(
+			'id_calon_penerima' => $this->input->post('id_calon_penerima'),
+            'id_kriteria' => $this->input->post('id_kriteria'),
+            'peringkat' => $this->input->post('peringkat'),
+
+
+        );
+		$this->db->insert('calon_penerima', $data);
+        // redirect('psurvei/index');
     }
 }
